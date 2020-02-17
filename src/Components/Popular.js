@@ -12,6 +12,7 @@ export default class Popular extends Component {
     }
 
     componentDidMount(){
+        window.scrollTo(0,0);
         this.funGetMovies();
     }
 

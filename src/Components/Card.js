@@ -38,12 +38,12 @@ export default class Card extends Component {
             <div className="col-12 p-2 rcardholder text-light">
                 <div className="card" onClick={()=>{this.funSetId(movie.id)}}>
                     <div className="row">
-                        <div className="col-4">
+                        <div className="col-5">
                             <div className="imgholder">
                                 <img className="card-img-top" src={env.imgPath +movie.poster_path} alt={movie.title} />
                             </div>
                         </div>
-                        <div className="col-8">
+                        <div className="col-7">
                             <div className="card-body p-3">
                                 <div className="h6 mt-3 mb-4 ">{movie.title}</div>
                                 <div className="h2">

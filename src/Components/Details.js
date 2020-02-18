@@ -131,7 +131,7 @@ export default class Details extends Component {
 
                         <div className="col-md-12 p-2 mt-3">
                             <div className="h3 text-warning mb-3">Overview</div>
-                            <div className="h1">
+                            <div className="h3">
                             { movie.overview }
                             </div>
                         </div>
@@ -143,7 +143,7 @@ export default class Details extends Component {
 
                         <div className="col-md-6 p-2 mt-3">
                             <div className="h3 text-warning mb-3">Official Website</div>
-                            <a className="bg-light rounded text-dark p-2 " href={ movie.homepage }>
+                            <a className="text-warning h3 p-2 " href={ movie.homepage }>
                             { movie.homepage }
                             </a>
                         </div>

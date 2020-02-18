@@ -136,15 +136,18 @@ export default class Details extends Component {
                             </div>
                         </div>
 
-                        <div className="col-md-12 p-2 mt-3">
+                       <div className="col-md-6 p-0 mt-3">
                             <div className="h3 text-warning mb-3">Screenshot</div>
-                            <div className="row m-0">
-                                <div className="col-md-6 p-0">
-                                    <img className="img-fluid" src={env.imgPath+movie.backdrop_path} />
-                                </div>
-                            </div>
+                                <img className="img-fluid" src={env.imgPath+movie.backdrop_path} />
                         </div>
 
+                        <div className="col-md-6 p-2 mt-3">
+                            <div className="h3 text-warning mb-3">Official Website</div>
+                            <a className="bg-light rounded text-dark p-2 " href={ movie.homepage }>
+                            { movie.homepage }
+                            </a>
+                        </div>
+                      
                         <div className="col-md-12 p-2 mt-3">
                             <div className="h3 text-warning mb-3">Tagline</div>
                             <div className="h1">
@@ -152,14 +155,7 @@ export default class Details extends Component {
                             </div>
                         </div>
 
-                        <div className="col-md-12 p-2 mt-3">
-                            <div className="h3 text-warning mb-3">Official Website</div>
-                            <a className="btn btn-light btn-lg " href={ movie.homepage }>
-                            { movie.homepage }
-                            </a>
-                        </div>
-
-                        <div className="col-md-12 p-2 mt-3 mb-4">
+                        <div className="col-md-12 p-2 my-4">
                             <button className="btn btn-warning btn-lg">Find more similar movies</button>
                         </div>
                             

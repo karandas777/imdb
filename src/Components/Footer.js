@@ -14,12 +14,7 @@ export default class Footer extends Component {
                 </button>
               </p>
               <p className="mb-5 mt-5 pr-5 mr-5">
-                Internet Movie Database{" "}
-                <sup>
-                  <small>
-                    <i className="fa fa-registered text-light"></i>
-                  </small>
-                </sup>
+                Internet Movie Database.
               </p>
 
               <p className="text-light h4">

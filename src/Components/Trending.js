@@ -22,14 +22,15 @@ export default class Trending extends Component {
         const data = new Service();
         data.funGetMethod(method)
         .then((res)=>{
-            console.log(res.data.results);
             this.setState({moviesList:res.data.results});
+        })
+        .catch(()=>{
+            this.props.history.push("/");    
         })
         
     }
 
     funGetDetails=(id)=>{
-        console.log(id)
         this.props.history.push(`/details/${id}`);
     }
     

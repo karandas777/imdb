@@ -37,6 +37,12 @@ body {
   transform: scale(1.2,1.2);
 }
 
+/* detail page */
+
+.detailimg{
+  height: 500px;
+}
+
 @media screen and (max-width:600px){
   .cat{
       display: none;

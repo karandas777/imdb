@@ -92,55 +92,35 @@ export default class Home extends Component {
                 <div>
                     <div className="display-4 mb-4"><i className="fa fa-home"></i> Home</div>
                     <div className="row">
-                        <div className="col-md-6 mb-4">
+                        <div className="col-md-3 mb-4">
                                 <Link to="/trending" className="text-light text-decoration-none">
-                                    <div className="rounded holder p-2 m-0 row">
-                                        <div className="col-5 p-0">
-                                            <img className="homeimg rounded" alt="1" src={env.imgPath + trendingmovie.poster_path} />
-                                        </div>
-                                        <div className="col-7">
-                                            <div className="moviecat">Trending Movies</div>        
-                                        </div>
-                                    
+                                    <div className="rounded holder p-2 m-0">
+                                        <img className="homeimg rounded w-100" alt="1" src={env.imgPath + trendingmovie.poster_path} />
+                                        <div className="h4 text-center mt-3">Trending Movies</div>        
                                     </div>
                                 </Link>
                         </div>
-                        <div className="col-md-6 mb-4">
+                        <div className="col-md-3 mb-4">
                                 <Link to="/toprated" className="text-light text-decoration-none">
-                                    <div className="rounded holder p-2 m-0 row">
-                                        <div className="col-5 p-0">
-                                            <img className="homeimg rounded" alt="2" src={env.imgPath + topratedmovie.poster_path} />
-                                        </div>
-                                        <div className="col-7">
-                                            <div className="moviecat">Top-Rated Movies</div>        
-                                        </div>
-                                    
+                                    <div className="rounded holder p-2 m-0">
+                                        <img className="homeimg rounded w-100" alt="2" src={env.imgPath + topratedmovie.poster_path} />
+                                        <div className="h4 text-center mt-3">Top-Rated Movies</div>        
                                     </div>
                                 </Link>
                         </div>
-                        <div className="col-md-6 mb-4">
+                        <div className="col-md-3 mb-4">
                                 <Link to="/popular" className="text-light text-decoration-none">
-                                    <div className="rounded holder p-2 m-0 row">
-                                        <div className="col-5 p-0">
-                                            <img className="homeimg rounded" alt="3" src={env.imgPath + popularmovie.poster_path} />
-                                        </div>
-                                        <div className="col-7">
-                                            <div className="moviecat">Popular Movies</div>        
-                                        </div>
-                                    
+                                    <div className="rounded holder p-2 m-0">
+                                        <img className="homeimg rounded w-100" alt="3" src={env.imgPath + popularmovie.poster_path} />
+                                        <div className="h4 text-center mt-3">Popular Movies</div>        
                                     </div>
                                 </Link>
                         </div>
-                        <div className="col-md-6 mb-4">
+                        <div className="col-md-3 mb-4">
                                 <Link to="/upcoming" className="text-light text-decoration-none">
-                                    <div className="rounded holder p-2 m-0 row">
-                                        <div className="col-5 p-0">
-                                            <img className="homeimg rounded" alt="4" src={env.imgPath + upcomingmovie.poster_path} />
-                                        </div>
-                                        <div className="col-7">
-                                            <div className="moviecat">Upcoming Movies</div>        
-                                        </div>
-                                    
+                                    <div className="rounded holder p-2 m-0">
+                                        <img className="homeimg rounded w-100" alt="1" src={env.imgPath + upcomingmovie.poster_path} />
+                                        <div className="h4 text-center mt-3">Upcoming Movies</div>        
                                     </div>
                                 </Link>
                         </div>

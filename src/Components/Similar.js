@@ -59,7 +59,8 @@ export default class Similar extends Component {
         else{
             return (
                 <div>
-                    <div className="display-4 mb-3">Movies Similar to: {movie.title} </div>
+                    <div className="display-4 mb-3">Movies Similar to </div>
+                    <div className="card p-3 mb-3 text-warning">{movie.title}</div>
                     <div className="row">
                     {
                         moviesList.map((similarmovie)=>(

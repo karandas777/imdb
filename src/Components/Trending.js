@@ -25,7 +25,7 @@ export default class Trending extends Component {
             this.setState({moviesList:res.data.results});
         })
         .catch(()=>{
-            this.props.history.push("/");    
+            this.props.history.push("/error");    
         })
         
     }

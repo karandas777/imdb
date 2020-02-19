@@ -9,6 +9,8 @@ import Popular from "./Components/Popular";
 import Upcoming from "./Components/Upcoming";
 import Footer from './Components/Footer';
 import Details from './Components/Details';
+import Similar from './Components/Similar';
+import Error from './Components/Error';
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
         <Route exact path="/popular" component={Popular} />
         <Route exact path="/upcoming" component={Upcoming} />
         <Route exact path="/details/:id" component={Details} />
+        <Route exact path="/similar/:id" component={Similar} />
+        <Route exact path="/error" component={Error} />
       </div>
       <Footer/>
     </Router>

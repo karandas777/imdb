@@ -88,7 +88,7 @@ export default class Footer extends Component {
             </div>
           </div>
         </div>
-        <div className="text-center p-4 text-light">&copy; IMDB India 2020 /// Developer : Karan Das</div>
+        <div className="text-center p-4 text-light">IMDB 2020<i className="fa fa-cog mx-3 fa-spin"></i>Karan Das </div>
       </div>
     );
   }

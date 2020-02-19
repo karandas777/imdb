@@ -25,8 +25,12 @@ export default class Details extends Component {
             this.setState({movie:res.data});
         })
         .catch(()=>{
-            this.props.history.push("/");    
+            this.props.history.push("/error");    
         })
+    }
+
+    funGetSimilar=(id)=>{
+        this.props.history.push(`/similar/${id}`);
     }
     
 
@@ -41,7 +45,7 @@ export default class Details extends Component {
 
             return (
                 <div className="card">
-                    <div className="row m-0 p-2">
+                    <div className="row m-0 py-2 px-1">
                         <div className="col-md-4 p-2 text-center">
                             <img className="detailimg w-100" src={env.imgPath+movie.poster_path} alt={movie.id} />
                         </div>
@@ -138,12 +142,12 @@ export default class Details extends Component {
 
                        <div className="col-md-6 p-0 mt-3">
                             <div className="h3 text-warning mb-3">Screenshot</div>
-                                <img className="img-fluid" src={env.imgPath+movie.backdrop_path} />
+                                <img className="img-fluid" alt={movie.id} src={env.imgPath+movie.backdrop_path} />
                         </div>
 
                         <div className="col-md-6 p-2 mt-3">
                             <div className="h3 text-warning mb-3">Official Website</div>
-                            <a className="text-warning h3 p-2 " href={ movie.homepage }>
+                            <a className="text-light h3" href={ movie.homepage }>
                             { movie.homepage }
                             </a>
                         </div>
@@ -155,8 +159,10 @@ export default class Details extends Component {
                             </div>
                         </div>
 
-                        <div className="col-md-12 p-2 my-4">
-                            <button className="btn btn-warning btn-lg">Find more similar movies</button>
+                        <div className="col-md-12 p-2 my-4 text-center">
+                            <button className="btn btn-warning btn-lg" onClick={()=>{this.funGetSimilar(movie.id)}}>
+                                Find more similar movies <i className="fa fa-arrow-right"></i>
+                            </button>
                         </div>
                             
                     </div>

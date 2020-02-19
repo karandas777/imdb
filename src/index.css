@@ -3,11 +3,13 @@ body {
   background-color:#1e1e1e;
   font-family: 'Poppins', sans-serif;
   color: white;
+  scroll-behavior: smooth;
 }
 
 .holder{
-  background-image: linear-gradient(to right, #f12711, #f5af19);
+  background-image: linear-gradient(to right, #4776e6, #8e54e9);
 }
+
 
 .card-img-top{
   height: 350px;
@@ -43,6 +45,18 @@ body {
   height: 500px;
 }
 
+/* home page */
+
+.homeimg{
+  height:250px;
+  width: 200px;
+}
+
+.moviecat{
+  font-size: 44px;
+  margin-top: 30px;
+}
+
 @media screen and (max-width:600px){
   .cat{
       display: none;
@@ -55,5 +69,16 @@ body {
   }
   .rcardholder{
     display: block;
+  }
+  .detailimg{
+    height: 450px;
+  }
+  .homeimg{
+    height:170px;
+    width: 150px;
+  }
+  .moviecat{
+    font-size: 30px;
+    margin-top: 20px;
   }
 }

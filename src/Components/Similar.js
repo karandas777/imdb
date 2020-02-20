@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Service from './Service';
 import Card from './Card';
+import Loader from 'react-loader-spinner';
 
 export default class Similar extends Component {
     constructor(props) {
@@ -53,7 +54,14 @@ export default class Similar extends Component {
 
         if(movie===""){
             return(
-                <div className="display-4">Loading...</div>
+                <div className="display-4 my-5 text-center">
+                <Loader
+                type="BallTriangle"
+                color="#8e54e9"
+                height={100}
+                width={100}
+                />
+                </div>
             )
         }
         else{

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Service from './Service';
 import Card from './Card';
+import Loader from 'react-loader-spinner';
 
 export default class Popular extends Component {
     constructor(props) {
@@ -36,17 +37,32 @@ export default class Popular extends Component {
     
     render() {
         const {moviesList} = this.state;
-        return (
-            <div>
-                <div className="display-4 mb-3">Most Popular Movies <i className="fa fa-thumbs-o-up"></i></div>
-                <div className="row">
-                {
-                    moviesList.map((movie)=>(
-                    <Card key={movie.id} movie={movie} funGetDetails={this.funGetDetails} />
-                    ))
-                }
-                </div>
+
+        if(moviesList.length === 0){
+            return (
+            <div className="display-4 my-5 text-center">
+            <Loader
+            type="BallTriangle"
+            color="#8e54e9"
+            height={100}
+            width={100}
+            />
             </div>
-        )
+            )
+        }
+        else{
+            return (
+                <div>
+                    <div className="display-4 mb-3">Most Popular Movies <i className="fa fa-thumbs-o-up"></i></div>
+                    <div className="row">
+                    {
+                        moviesList.map((movie)=>(
+                        <Card key={movie.id} movie={movie} funGetDetails={this.funGetDetails} />
+                        ))
+                    }
+                    </div>
+                </div>
+            )
+        }
     }
 }

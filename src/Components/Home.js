@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Service from './Service';
 import env from './Environment';
+import Loader from 'react-loader-spinner';
 
 export default class Home extends Component {
 
@@ -84,13 +85,20 @@ export default class Home extends Component {
         const {trendingmovie,topratedmovie,popularmovie,upcomingmovie} = this.state;
         if (trendingmovie ==="" || topratedmovie ==="" || popularmovie ==="" || upcomingmovie ===""){
             return(
-                <div className="display-4">Loading...</div>
+                <div className="display-4 my-5 text-center">
+                <Loader
+                type="BallTriangle"
+                color="#8e54e9"
+                height={100}
+                width={100}
+                />
+                </div>
             )
         }
         else{
             return (
                 <div>
-                    <div className="display-4 mb-4"><i className="fa fa-home"></i> Home</div>
+                    <div className="display-4 mb-4">IMDb.</div>
                     <div className="row">
                         <div className="col-md-3 mb-4">
                                 <Link to="/trending" className="text-light text-decoration-none">

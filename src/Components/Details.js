@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Service from './Service';
 import env from './Environment';
+import Loader from 'react-loader-spinner';
 
 export default class Details extends Component {
 
@@ -38,7 +39,14 @@ export default class Details extends Component {
         const {movie} = this.state;
         if(this.state.movie===''){
             return (
-                <div className="display-4">Loading...</div>
+                <div className="display-4 my-5 text-center">
+                <Loader
+                type="BallTriangle"
+                color="#8e54e9"
+                height={100}
+                width={100}
+                />
+                </div>
             )
         }
         else{

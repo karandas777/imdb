@@ -59,11 +59,8 @@ export default class Details extends Component {
                         </div>
     
                         <div className="col-md-8 p-3">
-                            <div className="h1 my-3">{movie.title}</div>
-                            <div className="display-4 my-4"><i className="fa fa-star fa-fw text-warning"></i> {movie.vote_average} / 10</div>
-                            <div className="h3 my-3">
-                                <i className="fa fa-calendar-o fa-fw text-warning"></i> {movie.release_date}
-                            </div>
+                            <div className="h1 mt-3 mb-5">{movie.title}</div>
+                            <div className="h3 my-3"><i className="fa fa-star fa-fw text-warning"></i> {movie.vote_average} / 10</div>
                             <div className="h3 my-3">
                                 <i className="fa fa-thumbs-o-up fa-fw text-warning"></i> { movie.vote_count }
                             </div>
@@ -72,6 +69,9 @@ export default class Details extends Component {
                             </div>
                             <div className="h3 mt-3">
                                 <i className="fa fa-info-circle fa-fw text-warning"></i> { movie.status }
+                            </div>
+                            <div className="h3 my-3">
+                                <i className="fa fa-calendar-o fa-fw text-warning"></i> {movie.release_date}
                             </div>
                         </div>
     
@@ -143,19 +143,19 @@ export default class Details extends Component {
 
                         <div className="col-md-12 p-2 mt-3">
                             <div className="h3 text-warning mb-3">Overview</div>
-                            <div className="h3">
+                            <div className="h5 py-3">
                             { movie.overview }
                             </div>
                         </div>
 
-                       <div className="col-md-6 p-0 mt-3">
+                       <div className="col-md-6 p-2 mt-3">
                             <div className="h3 text-warning mb-3">Screenshot</div>
                                 <img className="img-fluid" alt={movie.id} src={env.imgPath+movie.backdrop_path} />
                         </div>
 
                         <div className="col-md-6 p-2 mt-3">
                             <div className="h3 text-warning mb-3">Official Website</div>
-                            <a className="text-light h3" href={ movie.homepage }>
+                            <a className="text-light text-decoration-none h5 py-3" href={ movie.homepage }>
                             { movie.homepage }
                             </a>
                         </div>
@@ -169,7 +169,7 @@ export default class Details extends Component {
 
                         <div className="col-md-12 p-2 my-4 text-center">
                             <button className="btn btn-warning btn-lg" onClick={()=>{this.funGetSimilar(movie.id)}}>
-                                Find more similar movies <i className="fa fa-arrow-right"></i>
+                                Find similar movies <i className="fa fa-arrow-right"></i>
                             </button>
                         </div>
                             

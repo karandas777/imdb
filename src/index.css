@@ -10,7 +10,6 @@ body {
   background-image: linear-gradient(to right, #4776e6, #8e54e9);
 }
 
-
 .card-img-top{
   height: 350px;
 }
@@ -26,6 +25,10 @@ body {
 .cardholder :hover img{
   transition: 0.5s;
   transform: scale(1.2,1.2);
+}
+
+.endfoot{
+  background-color: black;
 }
 
 /* responsive card */
@@ -52,8 +55,16 @@ body {
 }
 
 @media screen and (max-width:600px){
-  .cat{
-      display: none;
+  .nav-item{
+      margin-top: 20px;
+  }
+  .navbar-nav{
+    padding-bottom: 10px;
+  }
+  .navbtn{
+    width: 100%;
+    padding: 10px;
+    text-align: left;
   }
   .card-img-top{
     height: 200px;

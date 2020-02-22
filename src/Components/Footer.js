@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 export default class Footer extends Component {
   render() {
     return (
+      <React.Fragment>
       <div className="container-fluid holder text-light">
         <div className="container pt-3 pb-5">
           <div className="row pt-5 pb-5">
@@ -88,8 +89,9 @@ export default class Footer extends Component {
             </div>
           </div>
         </div>
-        <div className="text-center p-4 text-light">IMDB 2020<i className="fa fa-cog mx-3 fa-spin"></i>Karan Das </div>
       </div>
+      <div className="text-center p-4 endfoot text-light">IMDB 2020<i className="fa fa-cog text-warning mx-3 fa-spin"></i>Karan Das </div>
+      </React.Fragment>
     );
   }
 }

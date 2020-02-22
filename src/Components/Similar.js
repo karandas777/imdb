@@ -52,7 +52,7 @@ export default class Similar extends Component {
     render() {
         const {moviesList,movie} = this.state;
 
-        if(movie===""){
+        if(moviesList.length===0){
             return(
                 <div className="display-4 my-5 text-center">
                 <Loader

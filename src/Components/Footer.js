@@ -90,7 +90,7 @@ export default class Footer extends Component {
           </div>
         </div>
       </div>
-      <div className="text-center p-4 endfoot text-light">IMDB 2020<i className="fa fa-cog text-warning mx-3 fa-spin"></i>Karan Das </div>
+      <div className="text-center p-4 text-light">IMDB 2020<i className="fa fa-cog text-warning mx-3 fa-spin"></i>Karan Das </div>
       </React.Fragment>
     );
   }

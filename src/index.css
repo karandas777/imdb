@@ -7,7 +7,7 @@ body {
 }
 
 .holder{
-  background-image: linear-gradient(to right, #4776e6, #8e54e9);
+  background-image: linear-gradient( 68.2deg,  rgba(3,126,243,1) -0.3%, rgba(48,195,158,1) 100.2% );
 }
 
 .card-img-top{
@@ -25,10 +25,6 @@ body {
 .cardholder :hover img{
   transition: 0.5s;
   transform: scale(1.2,1.2);
-}
-
-.endfoot{
-  background-color: black;
 }
 
 /* responsive card */
@@ -54,6 +50,17 @@ body {
   height:350px;
 }
 
+/* navbar */
+
+.navbtn{
+  width: 22%;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  text-align: left;
+}
+
+
 @media screen and (max-width:600px){
   .nav-item{
       margin-top: 20px;
@@ -63,7 +70,10 @@ body {
   }
   .navbtn{
     width: 100%;
-    padding: 10px;
+    font-size: 15px;
+    padding: 7px 10px 7px 20px; 
+    margin-right: 10px;
+    margin-bottom: 20px;
     text-align: left;
   }
   .card-img-top{

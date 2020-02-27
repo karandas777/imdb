@@ -1,25 +1,26 @@
 import React, { Component } from 'react';
-import Card from './Card';
+import SeriesCard from './SeriesCard';
 import Loader from 'react-loader-spinner';
 import { Consumer } from './Context';
 
-export default class Upcoming extends Component {
-
+export default class AboutToAir extends Component {
+    
     componentDidMount(){
         window.scrollTo(0,0);
     }
-
+    
     funGetDetails=(id)=>{
-        this.props.history.push(`/details/${id}`);
+        this.props.history.push(`/seriesDetails/${id}`);
     }
     
     render() {
         return(
             <Consumer>
                 {(value)=>{
-                    const {upcomingMovies} = value;
 
-                    if(upcomingMovies.length === 0){
+                    const {aboutToAir} = value;
+
+                    if(aboutToAir.length === 0){
                         return (
                         <div className="display-4 my-5 text-center">
                         <Loader
@@ -34,11 +35,11 @@ export default class Upcoming extends Component {
                     else{
                         return (
                             <div>
-                                <div className="display-4 mb-3">Upcoming Movies <i className="fa fa-rss"></i></div>
+                                <div className="display-4 mb-3">Series about to Air <i className="fa fa-clock-o"></i></div>
                                 <div className="row">
                                 {
-                                    upcomingMovies.map((movie)=>(
-                                    <Card key={movie.id} movie={movie} funGetDetails={this.funGetDetails} />
+                                    aboutToAir.map((series)=>(
+                                    <SeriesCard key={series.id} series={series} funGetDetails={this.funGetDetails} />
                                     ))
                                 }
                                 </div>

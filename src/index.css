@@ -60,19 +60,16 @@ body {
   text-align: left;
 }
 
+.hiddenNav{
+  
+}
 
 @media screen and (max-width:600px){
-  .nav-item{
-      margin-top: 20px;
-  }
-  .navbar-nav{
-    padding-bottom: 10px;
-  }
+  
   .navbtn{
     width: 100%;
-    font-size: 15px;
-    padding: 7px 10px 7px 20px; 
-    margin-right: 10px;
+    padding:7px 10px 7px 20px; 
+    margin-right: 0px;
     margin-bottom: 20px;
     text-align: left;
   }

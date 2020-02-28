@@ -2,6 +2,20 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 export default class Header extends Component {
+
+  constructor(props) {
+    super(props)
+  
+    this.state = {
+       open:false
+    }
+  }
+
+  funSetToggle=()=>{
+    this.setState({open : !this.state.open})
+  }
+  
+
   render() {
     return (
       <div className="container-fluid holder">
@@ -13,18 +27,20 @@ export default class Header extends Component {
             <button
               className="navbar-toggler bg-light text-dark px-3 py-2"
               type="button"
-              data-toggle="collapse"
-              data-target="#navbarToggleExternalContent"
+              onClick={()=>{this.funSetToggle()}}
             >
-              <i className="fa fa-bars"></i>
+              {this.state.open ? (<i className="fa fa-times fa-fw"></i>) : (<i className="fa fa-bars fa-fw"></i>)}
+              
             </button>
           </nav>
-          <div className="collapse" id="navbarToggleExternalContent">
-            <div className="p-3 text-center">
+          {this.state.open ? (
+            <div className="hiddenNav">
+            <div className="py-3 text-center">
             
                   <Link
                     className="btn btn-light navbtn rounded-pill"
                     to="/trending"
+                    onClick={()=>{this.funSetToggle()}}
                   >
                     <i className="fa fa-line-chart fa-fw"></i>{" "}
                     Trending Movies
@@ -33,6 +49,7 @@ export default class Header extends Component {
                   <Link
                     className="btn btn-light navbtn rounded-pill"
                     to="/toprated"
+                    onClick={()=>{this.funSetToggle()}}
                   >
                     <i className="fa fa-film fa-fw"></i>{" "}
                      Top Rated Movies
@@ -41,6 +58,7 @@ export default class Header extends Component {
                   <Link
                     className="btn btn-light navbtn rounded-pill"
                     to="/popular"
+                    onClick={()=>{this.funSetToggle()}}
                   >
                     <i className="fa fa-thumbs-o-up fa-fw"></i>{" "}
                      Popular Movies
@@ -48,6 +66,7 @@ export default class Header extends Component {
                 
                   <Link className="btn btn-light navbtn rounded-pill" 
                     to="/upcoming"
+                    onClick={()=>{this.funSetToggle()}}
                   >
                     <i className="fa fa-rss fa-fw"></i>{" "}
                      Upcoming Movies
@@ -55,6 +74,7 @@ export default class Header extends Component {
 
                   <Link className="btn btn-light navbtn rounded-pill" 
                     to="/topRatedSeries"
+                    onClick={()=>{this.funSetToggle()}}
                   >
                     <i className="fa fa-diamond fa-fw"></i>{" "}
                      Top Rated Series
@@ -62,6 +82,7 @@ export default class Header extends Component {
 
                   <Link className="btn btn-light navbtn rounded-pill" 
                     to="/popularSeries"
+                    onClick={()=>{this.funSetToggle()}}
                   >
                     <i className="fa fa-television fa-fw"></i>{" "}
                      Popular Series
@@ -69,6 +90,7 @@ export default class Header extends Component {
 
                   <Link className="btn btn-light navbtn rounded-pill" 
                     to="/airingToday"
+                    onClick={()=>{this.funSetToggle()}}
                   >
                     <i className="fa fa-podcast fa-fw"></i>{" "}
                      Airing Today
@@ -76,6 +98,7 @@ export default class Header extends Component {
 
                   <Link className="btn btn-light navbtn rounded-pill" 
                     to="/aboutToAir"
+                    onClick={()=>{this.funSetToggle()}}
                   >
                     <i className="fa fa-clock-o fa-fw"></i>{" "}
                      About to Air
@@ -83,6 +106,8 @@ export default class Header extends Component {
           
             </div>
           </div>
+          ) : null}
+          
         </div>
       </div>
     );

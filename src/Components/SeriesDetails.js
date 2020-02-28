@@ -24,7 +24,6 @@ export default class SeriesDetails extends Component {
         data.funGetMethod(method)
         .then((res)=>{
             this.setState({series:res.data});
-            console.log(res.data);
         })
         .catch(()=>{
             this.props.history.push("/error");    

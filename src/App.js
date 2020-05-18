@@ -27,6 +27,7 @@ function App() {
     <Provider history={newHistory} >
       <Router>
       <Header/>
+      <div className="container-fluid px-1">
       <div className="container py-4">
         <Route exact path="/" component={Home} />
         <Route exact path="/trending" component={Trending} />
@@ -42,6 +43,7 @@ function App() {
         <Route exact path="/aboutToAir" component={AboutToAir} />
         <Route exact path="/seriesDetails/:id" component={SeriesDetails} />
         <Route exact path="/seriesSimilar/:id" component={SeriesSimilar} />
+      </div>
       </div>
       <Footer/>
       </Router>

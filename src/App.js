@@ -28,7 +28,7 @@ function App() {
       <Router>
       <Header/>
       <div className="container-fluid px-1">
-      <div className="container py-4">
+      <div className="container py-4 px-1">
         <Route exact path="/" component={Home} />
         <Route exact path="/trending" component={Trending} />
         <Route exact path="/toprated" component={TopRated} />

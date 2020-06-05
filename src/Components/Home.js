@@ -10,7 +10,6 @@ export default class Home extends Component {
         window.scrollTo(0,0);
     }
     
-
     render() {
 
         return(

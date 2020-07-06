@@ -19,6 +19,7 @@ import SeriesDetails from './Components/SeriesDetails';
 import SeriesSimilar from './Components/SeriesSimilar';
 import AboutToAir from './Components/AboutToAir';
 import AiringToday from './Components/AiringToday';
+import Search from './Components/Search';
 
 const newHistory = createBrowserHistory();
 
@@ -43,6 +44,7 @@ function App() {
         <Route exact path="/aboutToAir" component={AboutToAir} />
         <Route exact path="/seriesDetails/:id" component={SeriesDetails} />
         <Route exact path="/seriesSimilar/:id" component={SeriesSimilar} />
+        <Route exact path="/search" component={Search} />
       </div>
       </div>
       <Footer/>

@@ -24,6 +24,9 @@ export default class Header extends Component {
             <Link className="btn text-light p-0" to="/">
               <i className="fa fa-imdb fa-3x"></i>
             </Link>
+            <Link className="btn btn-light text-dark rounded-pill ml-auto mr-2" to="/search">
+              <i className="fa fa-search"></i>
+            </Link>
             <button
               className="navbar-toggler bg-light text-dark px-3 py-2"
               type="button"

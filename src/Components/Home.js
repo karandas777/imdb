@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import env from './Environment';
 import Loader from 'react-loader-spinner';
-import { Consumer } from './Context';
+import { Consumer} from './Context';
 
 export default class Home extends Component {
 

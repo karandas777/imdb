@@ -3,6 +3,9 @@ body {
   background-color:#1e1e1e;
   font-family: 'Poppins', sans-serif;
   color: white;
+}
+
+html{
   scroll-behavior: smooth;
 }
 
